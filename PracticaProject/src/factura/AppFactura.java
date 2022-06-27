@@ -44,12 +44,9 @@ public class AppFactura {
                         Producto prod=new Producto();
 
                         // ISSAC: SALI A TROTAR XD VUELVO EN 1 HORA O MAS
-
-
-
-
-
-
+                        /*NICOLE: xd,por cierto me di cuenta que mejor queda en recolectar los datos de cliente y producto en 
+                        cada clase,perdón :c me llegó la iluminación para programar,los cambios estarán en mi rama incluidos estos de Issac*/
+                        
 
                         System.out.println("Realice su compra");
 
