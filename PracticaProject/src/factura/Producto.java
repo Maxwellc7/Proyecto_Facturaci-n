@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Producto {
 
+//Variables
     String nombre;
     double valorUni;
     int cantidad;
@@ -12,6 +13,8 @@ public class Producto {
     double iva;
 
     double precioFinal;
+
+//getters ans setters
 
     public String nombre() {
         return nombre;
