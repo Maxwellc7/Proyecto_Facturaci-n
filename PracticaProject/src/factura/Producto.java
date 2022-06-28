@@ -55,7 +55,7 @@ public class Producto {
         return this;
     }
 
-    public double calcularIva(double valorUni){
+   /* public double calcularIva(double valorUni){
         String conf;
         System.out.println("¿El producto tiene IVA?");
         Scanner sc=new Scanner(System.in);
@@ -72,10 +72,35 @@ public class Producto {
         else{
             return iva2=0;
         }
+    }*/
+    
+    public double calcularIva(){
+        if(nombre().contains("*")){
+            iva = 0.12 * cantidad * valorUni;
+            return iva;
+        }
+        else{
+            iva = 0;
+            return 0;
+        }
+
     }
 
     public Double valorProductos(int cantidad,double valorUni, double iva,double precioFinal) {
         precioFinal = (valorUni * cantidad) + iva;
         return precioFinal;
+    }
+    
+    public void llenarProductos(){
+        Scanner sc=new Scanner(System.in);
+        sc.useLocale(Locale.US);
+
+        System.out.println("Si el producto posee IVA agregar el caracter '*' al principio del nombre ");
+        System.out.println("Ingrese el nombre del producto: ");
+        nombre=sc.nextLine();
+        System.out.println("Ingrese el precio del producto:");
+        valorUni=sc.nextDouble();
+        System.out.println("Ingrese la cantidad de productos identicos a llevar: ");
+        cantidad=sc.nextInt();
     }
 }
