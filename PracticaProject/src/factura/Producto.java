@@ -2,7 +2,7 @@ package factura;
 
 import java.util.Scanner;
 import java.util.Locale;
-
+import java.util.InputMismatchException;
 public class Producto {
 
     //Variables
@@ -67,10 +67,26 @@ public class Producto {
         System.out.println("\nSi el producto posee IVA agregar el caracter '*' al principio del nombre ");
         System.out.println("Ingrese el nombre del producto: ");
         nombre=sc.nextLine();
-        System.out.println("Ingrese el precio del producto:");
-        valorUni=sc.nextDouble();
-        System.out.println("Ingrese la cantidad de productos identicos a llevar: ");
-        cantidad=sc.nextInt();
+        while(true){
+            try{
+                System.out.println("Ingrese el precio del producto:");
+                String text = sc.nextLine().replace(",", ".");
+                valorUni = Double.parseDouble(text);
+                break;
+            }catch (Exception ex){
+                System.out.println("El precio no es un numero");
+            }
+        }
+        while(true){
+            try{
+                System.out.println("Ingrese la cantidad de productos identicos a llevar: ");
+                cantidad = sc.nextInt();
+                break;
+            }catch (InputMismatchException ex1){
+                sc.nextLine();
+                System.out.println("El precio no es un numero o no es entero");
+            }
+        }
     }
 
     public double calcularIva(){
