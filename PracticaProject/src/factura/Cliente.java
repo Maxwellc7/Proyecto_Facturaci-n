@@ -2,12 +2,14 @@ package factura;
 
 import java.util.Scanner;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Cliente {
 
     //variables
     private String id;
-    private  String nombre;
+    private  String nombre;//
     private String direccion;
     private String numCel;
     private String email;
@@ -69,6 +71,25 @@ public class Cliente {
     public void ingresarDatos(){
         Scanner sc=new Scanner(System.in);
         sc.useLocale(Locale.US);
+
+        //Es un punto a tomar en cuenta, no obstante, si la ejecución del programa se desarrolla en las
+        // condiciones ideales y/o normales por tanto no repercute o influye a los resultados deseados.
+        /*Pattern pattern = Pattern.compile(nombre);
+        Matcher buscar = pattern.matcher(nombre);
+
+
+        while(true){
+            try{
+                System.out.print("-Ingrese el nombre del cliente:");
+                nombre=sc.nextLine();
+                if(buscar.find()){
+                    break;
+                }
+            }catch (Exception e){
+                System.out.println("El nombre tiene un número o un caracter no valido");
+            }
+        }
+        */
         System.out.print("-Ingrese el RUC/CI del cliente:");
         id=sc.nextLine();
         System.out.print("-Ingrese el nombre del cliente:");

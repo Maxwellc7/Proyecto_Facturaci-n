@@ -1,6 +1,5 @@
 package factura;
 
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.Locale;
 import java.util.Scanner;
 import java.time.LocalDate;
@@ -9,12 +8,12 @@ import java.time.format.DateTimeFormatter;
 public class Factura {
 
     //Variables
-    String ruc;
-    String nomTienda;
+    private String ruc;
+    private String nomTienda;
     int numFactura=001; //Dato que segun ingresen compradores aumente
-    String autSRI;
-    String fecha;
-    String direccion;
+    private String autSRI;
+    private String fecha;
+    private String direccion;
 
 
 

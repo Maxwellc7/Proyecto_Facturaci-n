@@ -117,7 +117,7 @@ public class AppFactura {
                     cliente.imprimirDatosCliente();
                     prod1.imprimirProduc();
                     System.out.println("--------------------------------------------------------------------------------------------" );
-                    precioTotal=prod1.precioFinal;
+                    precioTotal=prod1.precioFinal();
                     precioTotal=Math.round(precioTotal*100.0)/100.0;
                     System.out.println("TOTAL                                                                            "+precioTotal);
                     System.out.println("================================================================================================" );
@@ -139,7 +139,7 @@ public class AppFactura {
                     prod1.imprimirProduc();
                     prod2.imprimirProduc();
                     System.out.println("--------------------------------------------------------------------------------------------" );
-                    precioTotal=prod1.precioFinal+prod2.precioFinal;
+                    precioTotal=prod1.precioFinal()+prod2.precioFinal();
                     precioTotal=Math.round(precioTotal*100.0)/100.0;
                     System.out.println("TOTAL                                                                            "+precioTotal);
                     System.out.println("================================================================================================" );
@@ -165,7 +165,7 @@ public class AppFactura {
                     prod2.imprimirProduc();
                     prod3.imprimirProduc();
                     System.out.println("--------------------------------------------------------------------------------------------" );
-                    precioTotal=prod1.precioFinal+prod2.precioFinal+prod3.precioFinal;
+                    precioTotal=prod1.precioFinal()+prod2.precioFinal()+prod3.precioFinal();
                     precioTotal=Math.round(precioTotal*100.0)/100.0;
                     System.out.println("TOTAL                                                                            "+precioTotal);
                     System.out.println("================================================================================================" );
@@ -194,7 +194,7 @@ public class AppFactura {
                     prod3.imprimirProduc();
                     prod4.imprimirProduc();
                     System.out.println("--------------------------------------------------------------------------------------------" );
-                    precioTotal=prod1.precioFinal+prod2.precioFinal+prod3.precioFinal+prod4.precioFinal;
+                    precioTotal=prod1.precioFinal()+prod2.precioFinal()+prod3.precioFinal()+prod4.precioFinal();
                     precioTotal=Math.round(precioTotal*100.0)/100.0;
                     System.out.println("TOTAL                                                                            "+precioTotal);
                     System.out.println("================================================================================================" );
@@ -227,7 +227,7 @@ public class AppFactura {
                     prod4.imprimirProduc();
                     prod5.imprimirProduc();
                     System.out.println("--------------------------------------------------------------------------------------------" );
-                    precioTotal=prod1.precioFinal+prod2.precioFinal+prod3.precioFinal+prod4.precioFinal+prod5.precioFinal;
+                    precioTotal=prod1.precioFinal()+prod2.precioFinal()+prod3.precioFinal()+prod4.precioFinal()+prod5.precioFinal();
                     precioTotal=Math.round(precioTotal*100.0)/100.0;
                     System.out.println("TOTAL                                                                            "+precioTotal);
                     System.out.println("================================================================================================" );

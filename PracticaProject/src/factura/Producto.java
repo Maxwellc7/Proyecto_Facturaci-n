@@ -6,11 +6,11 @@ import java.util.InputMismatchException;
 public class Producto {
 
     //Variables
-    String nombre;
-    double valorUni;
-    int cantidad;
-    double iva;
-    double precioFinal;
+    private String nombre;
+    private double valorUni;
+    private int cantidad;
+    private double iva;
+    private double precioFinal;
 
     //Getters and Setters
     public String nombre() {
